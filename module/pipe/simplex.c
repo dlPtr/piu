@@ -12,7 +12,7 @@ int simplex_com(int argc, char *argv[])
 {
     int ret = 0;
     int fd[2] = {0};
-    char buff[1024] = {0};
+    char buff[MAX_BUFFER_LENGTH] = {0};
 
     /* Create pipe, fd[0] for read and fd[1] for write */
     ret = pipe(fd);

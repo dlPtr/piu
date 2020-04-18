@@ -13,8 +13,8 @@ int duplex_com(int argc, char *argv[])
     int ret = 0;
     int fd1[2] = {0};
     int fd2[2] = {0};
-    char buff1[1024] = {0};
-    char buff2[1024] = {0};
+    char buff1[MAX_BUFFER_LENGTH] = {0};
+    char buff2[MAX_BUFFER_LENGTH] = {0};
 
     /* Create pipe, fd[0] for read and fd[1] for write */
     ret = pipe(fd1);
