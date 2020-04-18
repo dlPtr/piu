@@ -7,8 +7,8 @@ int main(int argc, char *argv[])
 {
     pid_t myPid = getpid();
 
-    printf("pid of mine is %d\n", myPid);
-    printf("And my father's pid is %d\n", getppid());
+    ut_log_info("pid of mine is %d\n", myPid);
+    ut_log_info("And my father's pid is %d\n", getppid());
 
     return 0;
 }
