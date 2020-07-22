@@ -7,8 +7,11 @@
 
 static FILE *g_logTo = NULL;
 
-#define _ut_log_ex(color, fformat, ...) do {                                         \
-    fprintf(g_logTo, color "%s:%d "fformat"\n" UT_NONE, __FILE__, __LINE__, ##__VA_ARGS__);   \
+#define _ut_log_ex(color, fformat, ...) do {\
+    fprintf(g_logTo, color "%s:%d "fformat"\n" UT_NONE,\
+        __FILE__,           \
+        __LINE__,           \
+        ##__VA_ARGS__);     \
 } while(0);
 
 /**
